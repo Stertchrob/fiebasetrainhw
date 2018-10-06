@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <nav class="navbar navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">
+            Train Schedule
+        </a>
+    </nav>
+</head>
+<body>
+    <table class="table" style="width:1000px; margin-left: 10%; margin-top: 2%">
+        <thead>
+          <tr>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency (min)</th>
+            <th scope="col">Next Arrival</th>
+            <th scope="col">Min Away</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Burnley</th>
+            <td id="burnleymin">25</td>
+            <td id="burnleyarrive"></td>
+            <td id="burnleywait"></td>
+          </tr>
+          <tr>
+            <th scope="row">Brighton</th>
+            <td id="brightonmin">45</td>
+            <td id="brightonarrive"></td>
+            <td id="brightonwait"></td>
+          </tr>
+          <tr>
+            <th scope="row">Faversham</th>
+            <td id="favershammin">15</td>
+            <td id="favorshamarrive"></td>
+            <td id="favorshamwait"></td>
+          </tr>
+          <tr>
+            <th scope="row">Landon St Pancras</th>
+            <td id="landonmin">60</td>
+            <td id="landonarrive"></td>
+            <td id="landonwait"></td>
+          </tr>
+          <tr>
+            <th scope="row">Sutton (Surrey)</th>
+            <td id="suttonmin">55</td>
+            <td id="suttonarrive"></td>
+            <td id="suttonwait"></td>
+          </tr>
+        </tbody>
+          <tr>
+            <th scope="row" id="destination"></th>
+            <td id="frequency"></td>
+            <td id="minaway"></td>
+            <td id="nextarrival"></td>
+          </tr>
+        </tbody>
+      </table>
+      <form style="width:1000px; margin-left: 10%; margin-top: 2%">
+        <div class="form-group">
+          <label for="exampleInputPassword1"><strong>Destination</strong></label>
+          <input type="text" class="form-control" id="input2" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1"><strong>First Train Time (Military Time)</strong></label>
+            <input type="text" class="form-control" id="input3" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1"><strong>Frquency (Min)</strong></label>
+            <input type="text" class="form-control" id="input4" placeholder="">
+        </div>
+        <button type="submit" id="addtrain" class="btn btn-primary">Submit</button>
+    </form> 
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="assets/main.js"></script>
+    
+</body>
+</html>
